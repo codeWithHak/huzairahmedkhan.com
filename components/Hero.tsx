@@ -200,6 +200,7 @@ export default function Hero() {
               alt="Huzair Ahmed Khan"
               width={500}
               height={625}
+              sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
               className="relative z-10 h-auto w-56 scale-110 object-cover sm:w-64 sm:scale-125 md:w-80 lg:w-96"
               priority
             />

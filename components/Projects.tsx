@@ -71,6 +71,7 @@ export default function Projects() {
               src={featured.image}
               alt={featured.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1152px"
               className="object-cover"
               priority
               onError={(e) => {
@@ -98,24 +99,28 @@ export default function Projects() {
                 ))}
               </div>
               <div className="ml-auto flex gap-3">
-                <Link
-                  href={featured.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="clip-corner inline-flex items-center gap-2 bg-[#BFE600] px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-[#d4f520]"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
-                </Link>
-                <Link
-                  href={featured.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="clip-corner inline-flex items-center gap-2 border border-[#333] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-100 hover:border-[#BFE600] hover:text-[#BFE600]"
-                >
-                  <Github className="h-4 w-4" />
-                  Code
-                </Link>
+                {featured.liveUrl !== "#" && (
+                  <Link
+                    href={featured.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="clip-corner inline-flex items-center gap-2 bg-[#BFE600] px-5 py-2.5 text-sm font-semibold text-black transition-all hover:bg-[#d4f520]"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </Link>
+                )}
+                {featured.githubUrl !== "#" && (
+                  <Link
+                    href={featured.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="clip-corner inline-flex items-center gap-2 border border-[#333] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-100 hover:border-[#BFE600] hover:text-[#BFE600]"
+                  >
+                    <Github className="h-4 w-4" />
+                    Code
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -137,7 +142,9 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  loading="lazy"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = `https://placehold.co/800x450/0a0a0a/BFE600?text=${project.title}`;
@@ -162,24 +169,28 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Link
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="clip-corner inline-flex items-center gap-2 bg-[#BFE600] px-4 py-2 text-xs font-semibold text-black transition-all hover:bg-[#d4f520]"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    Live Demo
-                  </Link>
-                  <Link
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="clip-corner inline-flex items-center gap-2 border border-[#333] px-4 py-2 text-xs font-semibold text-white transition-colors duration-100 hover:border-[#BFE600] hover:text-[#BFE600]"
-                  >
-                    <Github className="h-3.5 w-3.5" />
-                    Code
-                  </Link>
+                  {project.liveUrl !== "#" && (
+                    <Link
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="clip-corner inline-flex items-center gap-2 bg-[#BFE600] px-4 py-2 text-xs font-semibold text-black transition-all hover:bg-[#d4f520]"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      Live Demo
+                    </Link>
+                  )}
+                  {project.githubUrl !== "#" && (
+                    <Link
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="clip-corner inline-flex items-center gap-2 border border-[#333] px-4 py-2 text-xs font-semibold text-white transition-colors duration-100 hover:border-[#BFE600] hover:text-[#BFE600]"
+                    >
+                      <Github className="h-3.5 w-3.5" />
+                      Code
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

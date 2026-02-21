@@ -52,12 +52,28 @@ export const metadata: Metadata = {
     url: "https://huzairahmedkhan.com",
     siteName: "Huzair Ahmed Khan",
     locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Huzair Ahmed Khan — Agentic AI Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Huzair Ahmed Khan | Agentic AI Developer",
     description: "I don't build chatbots. I build AI employees.",
     creator: "@HuzairK36769348",
+    images: [
+      {
+        url: "/twitter-image",
+        width: 1200,
+        height: 630,
+        alt: "Huzair Ahmed Khan — Agentic AI Developer",
+      },
+    ],
   },
   robots: {
     index: true,
