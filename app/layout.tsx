@@ -18,7 +18,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://huzairahmedkhan.com"),
+  // TODO: Change to https://huzairahmedkhan.com once custom domain is connected
+  metadataBase: new URL("https://huzairahmedkhan.vercel.app"),
   title: "Huzair Ahmed Khan | Agentic AI Developer",
   description:
     "I don't build chatbots. I build AI employees — autonomous AI agents that reason, plan, and execute complex workflows independently.",
@@ -43,13 +44,14 @@ export const metadata: Metadata = {
   creator: "Huzair Ahmed Khan",
   publisher: "Huzair Ahmed Khan",
   alternates: {
-    canonical: "https://huzairahmedkhan.com",
+    // TODO: Change to https://huzairahmedkhan.com once custom domain is connected
+    canonical: "https://huzairahmedkhan.vercel.app",
   },
   openGraph: {
     title: "Huzair Ahmed Khan | Agentic AI Developer",
     description: "I don't build chatbots. I build AI employees.",
     type: "website",
-    url: "https://huzairahmedkhan.com",
+    url: "https://huzairahmedkhan.vercel.app",
     siteName: "Huzair Ahmed Khan",
     locale: "en_US",
     images: [
@@ -95,8 +97,9 @@ const jsonLd = {
       "@type": "Person",
       name: "Huzair Ahmed Khan",
       jobTitle: "Agentic AI Developer",
-      url: "https://huzairahmedkhan.com",
-      image: "https://huzairahmedkhan.com/profile.png",
+      // TODO: Change to https://huzairahmedkhan.com once custom domain is connected
+      url: "https://huzairahmedkhan.vercel.app",
+      image: "https://huzairahmedkhan.vercel.app/profile.png",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Karachi",
@@ -114,7 +117,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       name: "Huzair Ahmed Khan — AI Development Services",
-      url: "https://huzairahmedkhan.com",
+      url: "https://huzairahmedkhan.vercel.app",
       provider: {
         "@type": "Person",
         name: "Huzair Ahmed Khan",
