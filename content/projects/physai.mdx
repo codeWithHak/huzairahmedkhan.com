@@ -1,0 +1,30 @@
+---
+title: "PhysAI"
+slug: "physai"
+description: "RAG-powered robotics education platform with AI chatbot. Combines structured content on robotics and physical AI with intelligent content querying that provides referenced answers."
+image: "/projects/physai.png"
+tags: ["OpenAI Agents SDK", "RAG", "FastAPI", "Next.js"]
+liveUrl: "https://physai.vercel.app"
+githubUrl: ""
+date: "2025-09-15"
+featured: false
+---
+
+## The problem
+
+Robotics and physical AI content is fragmented across papers, docs, and videos. Learners waste hours hunting for the right source instead of actually learning.
+
+## What I built
+
+A structured knowledge base paired with a RAG chatbot. Users can browse curated content on robotics topics, and at any point ask the chatbot a question — it answers from the knowledge base and cites the exact sources.
+
+## Stack & decisions
+
+- **Agents:** OpenAI Agents SDK for tool-calling and retrieval orchestration.
+- **Backend:** FastAPI — fast iteration, clean async story.
+- **Frontend:** Next.js with streaming responses so answers feel instant.
+- **Retrieval:** vector search over structured content, with source-aware citations in every answer.
+
+## Outcome
+
+Shipped a working prototype that demonstrates how domain-specific RAG beats generic chat for technical learning — citations and curation matter as much as the model.

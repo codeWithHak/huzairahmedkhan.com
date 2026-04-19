@@ -1,0 +1,38 @@
+---
+title: "Sorted"
+slug: "sorted"
+description: "A universe of AI agents that work for you. They listen, they act, they learn. Start with Jett — your task agent — and watch your world get sorted."
+image: "/projects/sorted.png"
+tags: ["AI Agents", "Multi-Agent", "OpenAI SDK", "Next.js"]
+liveUrl: ""
+githubUrl: ""
+date: "2025-11-10"
+featured: true
+order: 1
+---
+
+## The Universe of AI Agents
+
+Sorted is a universe of AI agents that work for you. They listen, they act, they learn. Each agent has a role, a voice, and a purpose — together they sort out the parts of your day that shouldn't need your attention.
+
+## Meet Jett
+
+Jett is the task agent — the front door to the Sorted universe. You talk to Jett the way you'd talk to a capable assistant: "remind me about the contract tomorrow", "book the 9am slot", "follow up on that email thread." Jett picks up the intent, plans the steps, and runs them.
+
+From Jett, the ecosystem opens up — as new agents join the universe, each one specialized, each one aware of the others.
+
+## What I built
+
+- **The universe model** — agents are independent but aware of each other, so tasks can hand off cleanly from one specialist to another.
+- **Jett as the entry point** — natural-language task intake that routes to the right agent under the hood.
+- **A learning loop** — each agent gets sharper with use, picking up on what the user actually means vs. what they literally said.
+
+## Stack & decisions
+
+- **Orchestration:** multi-agent setup with a planner that routes intents across agents.
+- **Backend:** OpenAI SDK for model + tool-calling primitives.
+- **Frontend:** Next.js app with a conversational UI that makes agent handoffs feel seamless.
+
+## Outcome
+
+A clearer mental model than the usual "one giant agent" approach — showing that specialized agents working together can feel like a single, coherent product.

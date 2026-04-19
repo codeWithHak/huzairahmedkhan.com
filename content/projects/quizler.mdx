@@ -1,0 +1,29 @@
+---
+title: "Quizler"
+slug: "quizler"
+description: "Full-stack agentic web app that converts PDFs and text into quizzes instantly. Reduces assessment preparation time from hours to seconds for educators."
+image: "/projects/quizler.png"
+tags: ["AI Agents", "Python", "FastAPI", "Next.js"]
+liveUrl: ""
+githubUrl: ""
+date: "2025-07-10"
+featured: false
+---
+
+## The problem
+
+Teachers and trainers spend hours writing quizzes from source material. Most of that time is mechanical — reading, picking facts, phrasing distractors — not pedagogy.
+
+## What I built
+
+An agentic web app that ingests a PDF or raw text and produces a ready-to-use quiz in seconds. The agent chunks the source, identifies testable facts, and generates well-formed questions with plausible distractors.
+
+## Stack & decisions
+
+- **Agents:** multi-step pipeline — extract → classify → generate → validate. Each step is its own agent call so failures are isolated and debuggable.
+- **Backend:** FastAPI for the quiz generation API.
+- **Frontend:** Next.js app for upload, preview, and export.
+
+## Outcome
+
+Cut quiz prep from hours to seconds on real educator workflows. The separation-of-concerns agent pipeline made it easy to tune one stage (e.g., distractor quality) without regressing others.

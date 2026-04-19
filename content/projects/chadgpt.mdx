@@ -1,0 +1,30 @@
+---
+title: "ChadGPT"
+slug: "chadgpt"
+description: "AI Agent Platform that transforms passive conversation into active task completion. Executes commands, automates workflows, and delivers tangible outcomes."
+image: "/projects/chadgpt.png"
+tags: ["Multi-Agent", "OpenAI SDK", "React", "FastAPI"]
+liveUrl: ""
+githubUrl: ""
+date: "2025-05-20"
+featured: false
+---
+
+## The problem
+
+Most chat interfaces stop at answers. The moment you want something *done* — file a ticket, send an email, update a sheet — the conversation ends and you go do it yourself.
+
+## What I built
+
+A multi-agent platform where conversations end in outcomes, not just replies. The user describes a goal, a planner agent breaks it into steps, and worker agents execute each step with real tools.
+
+## Stack & decisions
+
+- **Architecture:** planner + worker multi-agent setup. Planner owns the graph; workers own the actions.
+- **SDK:** OpenAI SDK for model + tool-calling primitives.
+- **Backend:** FastAPI with streaming to keep the user in the loop as each step runs.
+- **Frontend:** React, with a live run view so users can see the plan evolve.
+
+## Outcome
+
+Turns "explain how to do X" into "X is done." The planner/worker split made it straightforward to add new capabilities — just register another tool.

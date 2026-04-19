@@ -1,0 +1,32 @@
+---
+title: "SupplyGuard"
+slug: "supplyguard"
+description: "AI-powered supply chain risk platform. Monitors disruptions, predicts bottlenecks, and flags vulnerabilities before they hit your operations."
+image: "/projects/supplyguard.png"
+tags: ["AI Agents", "Next.js", "FastAPI", "Data"]
+liveUrl: ""
+githubUrl: ""
+date: "2025-10-05"
+featured: true
+order: 3
+hackathonWinner: true
+---
+
+## The problem
+
+Supply chains break in small, quiet ways long before they break loudly. By the time a shipment is late or a supplier is down, the damage is already working its way through operations. Teams need the signal early — while there's still time to reroute.
+
+## What I built
+
+SupplyGuard watches the inputs to a supply chain and surfaces risk before it becomes an outage. An agent pipeline ingests signals — news, logistics data, supplier health indicators — and turns them into ranked, actionable alerts instead of a firehose.
+
+## Stack & decisions
+
+- **Agents:** a multi-step pipeline — ingest → classify → rank → explain — so each stage can be tuned independently.
+- **Backend:** FastAPI orchestrates the agents and serves the alerts API.
+- **Frontend:** Next.js dashboard with a clean risk feed and drilldown views.
+- **Why agents, not just rules:** rules miss nuance. Agents reason about *why* a signal matters for a specific supply chain, not just whether it tripped a threshold.
+
+## Outcome
+
+Won the hackathon it was built for — the judges highlighted the reasoning layer as what separated it from a standard alerts dashboard. Turned a firehose of supply chain noise into a short, ranked list of "things a human should actually look at today."
